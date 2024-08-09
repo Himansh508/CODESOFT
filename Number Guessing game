@@ -1,0 +1,38 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int main()
+{
+string name;
+char input;
+int inputuser;
+cout<<"What's your name   ";
+getline(cin,name);
+cout<<endl;
+do
+{
+   srand(0);
+   int variable=rand()%100+1;
+   cout<<"Enter any number in between range  1 to 100   ";
+   cin>>inputuser;
+   cout<<endl;
+   if(inputuser>variable)
+   {
+   cout<<"Too high , Try Again" <<endl;
+   }
+   else if(inputuser<variable)
+   {
+   cout<<"Too low, Try Again"<<endl;
+   }
+   else{
+       cout<<"Congratulations! Guessed number is right"
+       <<endl;
+   }
+   cout<<"Would you like to try again Y/N    "; 
+   cin>>input;
+   cout<<endl;
+
+}while(input!='N');
+cout<<"Game end" <<endl;
+
+}
